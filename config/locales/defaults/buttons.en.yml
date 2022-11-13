@@ -1,0 +1,13 @@
+en:
+  buttons:
+    back: Back
+    destroy:
+      alt: Delete
+      confirm: Are you sure?
+    edit:
+      alt: Edit
+    new: Add
+    submit:
+      text: Save
+    actions: Actions
+    cancel: Cancel

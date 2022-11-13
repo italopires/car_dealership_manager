@@ -1,0 +1,11 @@
+en:
+  core:
+    empty: 'No records found'
+    buttons:
+      add_button: 'Add %{model}'
+      save: 'Save'
+      cancel: 'Cancel'
+    links:
+      actions:
+        title: 'Actions'
+        back: 'Back'

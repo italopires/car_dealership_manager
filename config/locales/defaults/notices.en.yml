@@ -1,0 +1,5 @@
+en:
+  notices:
+    created: "%{model} successfully added."
+    updated: "%{model} successfully updated."
+    destroyed: "%{model} successfully removed."
