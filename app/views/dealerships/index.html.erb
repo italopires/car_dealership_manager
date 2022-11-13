@@ -1,0 +1,11 @@
+<%= render 'layouts/common/header', title: Dealership.model_name.human(count: 2), subtitle: 'List' %>
+<div class="row">
+  <div class="col-md-12">
+    <%= render 'list' %>
+    <div class="list-action-buttons">
+      <%= render 'layouts/common/buttons/new',
+                 link: new_dealership_path %>
+    </div>
+  </div>
+</div>
+

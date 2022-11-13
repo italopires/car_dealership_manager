@@ -1,0 +1,6 @@
+<%= button_tag type: :submit,
+               name: submit_button_name(defined?(button_name) ? button_name : 'commit'),
+               class: 'btn btn-primary pmd-btn-raised pmd-ripple-effect',
+               data: { disable_with: "Saving..." } do %>
+  <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span> <%= submit_button_text(defined?(button_text) ? button_text : 'Save') %>
+<% end %>
