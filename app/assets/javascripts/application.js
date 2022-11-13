@@ -1,0 +1,9 @@
+//= require jquery/jquery
+//= require jquery_ujs
+//= require bootstrap/bootstrap
+//= require bootstrap/bootstrap-datepicker
+//= require bootstrap/datepicker-localize
+//= require propeller
+//= require jquery-mask/inputmask.js
+//= require jquery-mask/inputmask.date.extensions.js
+//= require_tree .
