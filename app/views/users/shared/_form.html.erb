@@ -66,6 +66,15 @@
       </div>
 
       <div class="form-group pmd-textfield pmd-textfield-floating-label">
+        <br />
+
+        <div class="input-group">
+          <div class="input-group-addon"><i class="material-icons md-dark pmd-sm">perm_identity</i></div>
+          <%= f.select :kind, options_for_select(User.kind.values) , { include_blank: 'Select a kind' }, { class: 'form-control' } %>
+        </div>
+      </div>
+
+      <div class="form-group pmd-textfield pmd-textfield-floating-label">
         <%= f.label :password, class: 'control-label pmd-input-group-label' %><br />
         <div class="input-group">
           <div class="input-group-addon"><i class="material-icons md-dark pmd-sm">lock_outline</i></div>

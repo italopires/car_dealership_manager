@@ -6,7 +6,9 @@
       <th>Dealership</th>
       <th>Price</th>
       <th>Status</th>
-      <th>Actions</th>
+      <% if policy(Car.new).update? %>
+        <th>Actions</th>
+      <% end %>
     </tr>
     </thead>
     <tbody>
@@ -16,14 +18,16 @@
           <td><%= object.dealership.name %></td>
           <td><%= object.price %></td>
           <td><%= object.status.capitalize %></td>
-          <td class="list-group-item">
-            <%= link_to edit_car_path(object), id: 'edit',
-                        data: { "toggle": "tooltip", "container": "body", "placement": "top", "original-title": "Edit" } do %>
-              <i class="material-icons pmd-sm">create</i>
-            <% end %>
-            <%= render 'layouts/common/icon_links/destroy',
-                      link: car_path(object) %>
-          </td>
+          <% if policy(object).update? %>
+            <td class="list-group-item">
+              <%= link_to edit_car_path(object), id: 'edit',
+                          data: { "toggle": "tooltip", "container": "body", "placement": "top", "original-title": "Edit" } do %>
+                <i class="material-icons pmd-sm">create</i>
+              <% end %>
+              <%= render 'layouts/common/icon_links/destroy',
+                        link: car_path(object) %>
+            </td>
+          <% end %>
         </tr>
       <% end.empty? %>
         <tr>

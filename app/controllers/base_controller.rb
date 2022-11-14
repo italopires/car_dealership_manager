@@ -1,15 +1,20 @@
 class BaseController < ApplicationController
   def index
+    authorize object_class.new
+
     @objects = object_class.all
   end
 
   def new
     @object = object_class.new
+
+    authorize @object
   end
 
   def create
     @object = object_class.new permitted_params
 
+    authorize @object
     if @object.save
       yield if block_given?
 
@@ -29,10 +34,14 @@ class BaseController < ApplicationController
 
   def edit
     @object = object_class.find params[:id]
+
+    authorize @object
   end
 
   def update
     @object = object_class.find params[:id]
+
+    authorize @object
 
     if @object.update(permitted_params)
       yield if block_given?
@@ -46,6 +55,7 @@ class BaseController < ApplicationController
   def destroy
     @object = object_class.find params[:id]
 
+    authorize @object
     @object.destroy
 
     redirect_to after_save_path, notice: t('notices.destroyed', model: object_class.model_name.human)
