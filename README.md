@@ -1,24 +1,46 @@
-# README
+# Car Dealership Manager App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application was generated with Ruby on Rails. This is a CRUD application for Car Dealership.
 
-Things you may want to cover:
+### Ruby on Rails
+This application requires:
+* ruby 3.1.2
 
-* Ruby version
+### Database
+This application uses Postgresql 12.1 with ActiveRecord
 
-* System dependencies
+### Development
+* Template Engine: ERB
+* Testing Framework: RSpec and Factory Bot
+* Authentication: Devise
+* Authorization: Pundit
 
-* Configuration
+## Deploy local through RVM and Ruby
+```
+rvm install 3.1.2
+```
+Learn more about [RVM](https://rvm.io/rvm/install) installation
 
-* Database creation
+### Install dependencies
+Using [Bundler](https://github.com/bundler/bundler)
+```
+gem install bundler -v 2.3.25
+bundle
+```
 
-* Database initialization
+### Task for initial development setup
 
-* How to run the test suite
+```
+rails db:create
+rails db:migrate
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+### Start rails server
+```
+rails s -b 0.0.0.0 -p 3000
+```
 
-* Deployment instructions
-
-* ...
+### To run the tests, execute the command bellow
+```
+rspec
+```
