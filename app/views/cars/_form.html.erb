@@ -1,0 +1,16 @@
+<div class="pmd-card pmd-z-depth pmd-card-custom-form">
+  <div class="pmd-card-body">
+    <%= simple_form_for @object do |f| %>
+      <%= f.input :name, input_html: { class: 'form-control' } %>
+      <%= f.input :dealership_id, as: :select, collection: @dealerships,
+                    input_html: { class: 'form-control' }, wrapper_html: { class: 'form-group' } %>
+      <%= f.input :price, as: :numeric, input_html: { class: 'form-control' } %>
+      <%= f.input :status, as: :select, input_html: { class: 'form-control' } %>
+
+      <%= render 'layouts/common/buttons/back',
+                 link: cars_path %>
+
+      <%= render 'layouts/common/buttons/submit' %>
+    <% end %>
+  </div>
+</div>

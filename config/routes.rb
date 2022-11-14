@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     get 'sign_out', to: 'users/sessions#destroy'
   end
   resources :dealerships
+  resources :cars
 
   root to: 'dealerships#index'
 end
