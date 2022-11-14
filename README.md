@@ -1,6 +1,6 @@
 # Car Dealership Manager App
 
-This application was generated with Ruby on Rails. This is a CRUD application for Car Dealership.
+This application was generated with Ruby on Rails 6.1.7. This is a CRUD application for Car Dealership.
 
 ### Ruby on Rails
 This application requires:
