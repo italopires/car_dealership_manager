@@ -3,7 +3,7 @@
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="pmd-card-title card-header-border text-center">
       <div class="loginlogo">
-        <a href="javascript:void(0);"><%# image_tag 'sonatafy.png', alt: 'logo', width: "200" %></a>
+        <a href="javascript:void(0);"><%= image_tag 'sonatafy.png', alt: 'logo', width: "200" %></a>
       </div>
       <h3>Log in <span>for a more <strong>PRODUCTIVE</strong> life</span></h3>
     </div>
@@ -50,7 +50,7 @@
 <div class="register-card" style="<%= devise_sign_up? %>">
   <div class="pmd-card-title card-header-border text-center">
     <div class="loginlogo">
-      <a href="javascript:void(0);"><%# image_tag 'sonatafy.png', alt: 'logo', width: "200" %></a>
+      <a href="javascript:void(0);"><%= image_tag 'sonatafy.png', alt: 'logo', width: "200" %></a>
     </div>
     <h3>Log in <span>for a more <strong>PRODUCTIVE</strong> life</span></h3>
   </div>
